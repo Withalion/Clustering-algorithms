@@ -1,0 +1,96 @@
+/*stranka s CSS basics pre charty: https://docs.oracle.com/javafx/2/charts/css-styles.htm
+*stranka s celym CSS pre javaFX: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#shape
+*Novy styl symbolu treba pridat cez series<cisloSeries> lebo pocet default-color je iba 8 potom sa opakuju.
+*Odporucam vyuzivat posledny cierny krizik na vyznacovanie cetroidov/medoidov je ho najlepsie vidno.
+*Do kodu po vytvoreni noveho scene-u treba pridat: scene.getStylesheets().add("nazovPackage-u/Chart.css");
+*/
+.chart-symbol { /* zakladny symbol svetlo fialovej gulicky */
+    -fx-background-color: thistle;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+.series1.chart-symbol{   /*tmavozelena gulicka*/
+    -fx-background-color: darkolivegreen;
+}
+.series2.chart-symbol{   /*tmavocerveny trojuholnik*/
+    -fx-background-color: firebrick;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.series3.chart-symbol { /* slabocerveny diamond */
+    -fx-background-color: tomato;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+.series4.chart-symbol { /* fialovy trojuholnik */
+    -fx-background-color: purple;
+    -fx-background-radius: 0;
+}
+.series5.chart-symbol { /*tyrkysovy trojuholnik */
+    -fx-background-color: turquoise;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 2;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.series6.chart-symbol { /*hneda gulicka */
+    -fx-background-color: saddlebrown;
+}
+.series7.chart-symbol { /*diamond obtiahnuty sedou */
+        -fx-background-color: grey;
+        -fx-background-insets: 0, 2;
+        -fx-background-radius: 0;
+}
+.series8.chart-symbol { /*svetlozelena gulicka */
+    -fx-background-color: yellowgreen;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+.series9.chart-symbol { /* svetlomodry stvorec */
+    -fx-background-color: lightsteelblue;
+    -fx-background-radius: 0;
+}
+.series10.chart-symbol { /* magenta cross */
+    -fx-background-color: magenta;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "M2,0 L5,4 L8,0 L10,0 L10,2 L6,5 L10,8 L10,10 L8,10 L5,6 L2,10 L0,10 L0,8 L4,5 L0,2 L0,0 Z";
+}
+.series11.chart-symbol{ /* agresivny fialovy diamond */
+    -fx-background-color: fuchsia;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+.series12.chart-symbol{ /* limetkova gulicka */
+    -fx-background-color: lime;
+}
+.series13.chart-symbol{ /* modry trojuholnik */
+    -fx-background-color: dodgerblue;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 2;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.series14.chart-symbol{ /* tmava khaki gulicka */
+    -fx-background-color: darkkhaki;
+}
+.series15.chart-symbol{ /*tmavozlaty diamond */
+    -fx-background-color: goldenrod;
+}
+.series16.chart-symbol{ /*tmavotyrkysova gulicka */
+    -fx-background-color: darkcyan;
+}
+.series17.chart-symbol{ /* telova gulicka */
+    -fx-background-color: burlywood;
+}
+.series18.chart-symbol{ /* krvavy diamond */
+    -fx-background-color: crimson;
+}
+.series19.chart-symbol{ /* cierny krizik */
+    -fx-background-color: black;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "M2,0 L5,4 L8,0 L10,0 L10,2 L6,5 L10,8 L10,10 L8,10 L5,6 L2,10 L0,10 L0,8 L4,5 L0,2 L0,0 Z";
+}
