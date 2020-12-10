@@ -10,13 +10,13 @@ public class KMC implements Distance{
 
     public void KMCalgo(Controller controller){
         double distance = 0;
-        final int CENTROID_NUM = 19;    //pocet ocakavanych centroidov
+        final int CENTROID_NUM = 20;    //pocet ocakavanych centroidov
         int index, change = 2 * CENTROID_NUM;
-        for (int i = 0; i < CENTROID_NUM; i++){   //vytvori sa dany pocet centroidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 500
+        for (int i = 0; i < CENTROID_NUM; i++){   //vytvori sa dany pocet centroidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 700
             Point newRandom = controller.getData().get((int)(Math.random() * controller.getData().size()));
             centroidList.add(new Point(newRandom.X, newRandom.Y));
             for (Point centroid: centroidList) {
-                if (centroid != centroidList.get(i) && this.getDistance(centroidList.get(i).X, centroidList.get(i).Y, centroid.X, centroid.Y) <= 500){
+                if (centroid != centroidList.get(i) && this.getDistance(centroidList.get(i).X, centroidList.get(i).Y, centroid.X, centroid.Y) <= 700){
                     centroidList.remove(i);
                     i--;
                     break;

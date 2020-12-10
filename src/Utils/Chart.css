@@ -88,7 +88,11 @@
 .series18.chart-symbol{ /* krvavy diamond */
     -fx-background-color: crimson;
 }
-.series19.chart-symbol{ /* cierny krizik */
+.series19.chart-symbol{ /* tmavozurovy krizik */
+    -fx-background-color: Teal;
+    -fx-background-radius: 0;
+}
+.series20.chart-symbol{ /* cierny krizik */
     -fx-background-color: black;
     -fx-background-radius: 0;
     -fx-background-insets: 0;

@@ -1,5 +1,9 @@
 /*stranka s CSS basics pre charty: https://docs.oracle.com/javafx/2/charts/css-styles.htm
-stranka s velym CSS pre javaFX: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#shape */
+*stranka s celym CSS pre javaFX: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#shape
+*Novy styl symbolu treba pridat cez series<cisloSeries> lebo pocet default-color je iba 8 potom sa opakuju.
+*Odporucam vyuzivat posledny cierny krizik na vyznacovanie cetroidov/medoidov je ho najlepsie vidno.
+*Do kodu po vytvoreni noveho scene-u treba pridat: scene.getStylesheets().add("nazovPackage-u/Chart.css");
+*/
 .chart-symbol { /* zakladny symbol svetlo fialovej gulicky */
     -fx-background-color: thistle;
     -fx-background-radius: 5px;
@@ -69,22 +73,26 @@ stranka s velym CSS pre javaFX: https://docs.oracle.com/javafx/2/api/javafx/scen
     -fx-background-insets: 0, 2;
     -fx-shape: "M5,0 L10,8 L0,8 Z";
 }
-.series14.chart-symbol{
+.series14.chart-symbol{ /* tmava khaki gulicka */
     -fx-background-color: darkkhaki;
 }
-.series15.chart-symbol{
+.series15.chart-symbol{ /*tmavozlaty diamond */
     -fx-background-color: goldenrod;
 }
-.series16.chart-symbol{
+.series16.chart-symbol{ /*tmavotyrkysova gulicka */
     -fx-background-color: darkcyan;
 }
-.series17.chart-symbol{
+.series17.chart-symbol{ /* telova gulicka */
     -fx-background-color: burlywood;
 }
-.series18.chart-symbol{
+.series18.chart-symbol{ /* krvavy diamond */
     -fx-background-color: crimson;
 }
-.series19.chart-symbol{/* cierny krizik */
+.series19.chart-symbol{ /* tmavozurovy krizik */
+    -fx-background-color: Teal;
+    -fx-background-radius: 0;
+}
+.series20.chart-symbol{ /* cierny krizik */
     -fx-background-color: black;
     -fx-background-radius: 0;
     -fx-background-insets: 0;
