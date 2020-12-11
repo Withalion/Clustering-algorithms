@@ -19,7 +19,7 @@ public class Chart extends Application {
     public void start(Stage stage) {    //funkcia vytvori nove okno s grafom na ktorom su clustre
         final NumberAxis xAxis = new NumberAxis(-5000, 5000, 500);
         final NumberAxis yAxis = new NumberAxis(-5000, 5000, 500);
-        final ScatterChart<Number,Number> chart = new ScatterChart<Number,Number>(xAxis,yAxis);
+        final ScatterChart<Number,Number> chart = new ScatterChart<>(xAxis,yAxis);
         chart.setTitle(controller.clusterAlgo);
         //body sa roztriedia do skupin na grafe podla prislusnosti ku centroidu, centroidy su samostatna skupina
         ArrayList<XYChart.Series<Number, Number>> seriesArrayList = new ArrayList<>();
@@ -38,8 +38,8 @@ public class Chart extends Application {
         }
         chart.getData().add(centroidSeries);
 
-        Scene scene  = new Scene(chart, 1000, 1000);
-        scene.getStylesheets().add("Utils/Chart.css");
+        Scene scene  = new Scene(chart, 700, 650);    //1000, 1000 je vhodne pre normalne obrazovky, NIE je to notebook friendly
+        scene.getStylesheets().add("Utils/Chart.css");              //700, 650 je vhodne pre notebooky
         stage.setScene(scene);
         stage.show();
     }

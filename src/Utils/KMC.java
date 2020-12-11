@@ -6,7 +6,6 @@ import ViewControls.Controller;
 import java.util.ArrayList;
 
 public class KMC extends Algorithm implements Distance{
-    //public ArrayList<Point> CMlist = new ArrayList<>();
 
     @Override
     public void clusterAlgorithm(Controller controller){

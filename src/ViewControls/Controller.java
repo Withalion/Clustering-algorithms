@@ -45,6 +45,8 @@ public class Controller {
                 break;
             case "aglo. zhlukovanie, centroid":
                 start = System.nanoTime();
+                seekAlgo = new Aglomerative();
+                seekAlgo.clusterAlgorithm(this);
                 end = System.nanoTime();
                 break;
             case "diviz. zhlukovanie, centroid":
