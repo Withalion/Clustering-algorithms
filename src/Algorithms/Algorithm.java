@@ -1,5 +1,6 @@
-package Utils;
+package Algorithms;
 
+import Utils.Point;
 import ViewControls.Controller;
 
 import java.util.ArrayList;

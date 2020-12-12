@@ -17,7 +17,7 @@ public class PointGenerator {
                 }
             }
         }
-        for (int i = 0; i < 40000; i++){    //vytvori sa dalsich 40 000 bodov s tym ze sa vyberie uz vytvoreny bod vypocita sa suradnicovy offset a prida novy bod
+        for (int i = 0; i < 20000; i++){    //vytvori sa dalsich 40 000 bodov s tym ze sa vyberie uz vytvoreny bod vypocita sa suradnicovy offset a prida novy bod
             int pickedIndex = (int) (Math.random()*pointList.size()), offsetX = (int)(Math.random() * 200 - 100), offsetY = (int)(Math.random() * 200 - 100);
             pointList.add(new Point(pointList.get(pickedIndex).X + offsetX, pointList.get(pickedIndex).Y + offsetY));
         }

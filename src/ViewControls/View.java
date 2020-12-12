@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -41,6 +42,7 @@ public class View extends Application {
     public void start(Stage primaryStage) throws Exception{ //vytvori prve okno kde sa da vybrat clustrovaci algoritmus a spustit ho
         prepareStart();
         primaryStage.setTitle("UI - klastrovanie");
+        primaryStage.getIcons().add(new Image("Utils/ai_icon.png"));
         primaryStage.setScene(new Scene(pane, 300, 300));
         primaryStage.show();
         controller.pairController(this);

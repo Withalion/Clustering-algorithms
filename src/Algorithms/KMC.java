@@ -1,11 +1,14 @@
 // K-means algoritmus s centroidom
-package Utils;
+package Algorithms;
 
+import Algorithms.Algorithm;
+import Utils.Distance;
+import Utils.Point;
 import ViewControls.Controller;
 
 import java.util.ArrayList;
 
-public class KMC extends Algorithm implements Distance{
+public class KMC extends Algorithm implements Distance {
 
     @Override
     public void clusterAlgorithm(Controller controller){

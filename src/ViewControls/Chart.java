@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class Chart extends Application {
 
         Scene scene  = new Scene(chart, 700, 650);    //1000, 1000 je vhodne pre normalne obrazovky, NIE je to notebook friendly
         scene.getStylesheets().add("Utils/Chart.css");              //700, 650 je vhodne pre notebooky
+        stage.getIcons().add(new Image("Utils/ai_icon.png"));
         stage.setScene(scene);
         stage.show();
     }

@@ -1,5 +1,9 @@
 package ViewControls;
 
+import Algorithms.Aglomerative;
+import Algorithms.Algorithm;
+import Algorithms.KMC;
+import Algorithms.KMM;
 import Utils.*;
 import javafx.stage.Stage;
 import java.util.ArrayList;

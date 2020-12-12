@@ -1,6 +1,9 @@
 //Aglomerativne zhlukovanie s centroidom
-package Utils;
+package Algorithms;
 
+import Algorithms.Algorithm;
+import Utils.Distance;
+import Utils.Point;
 import ViewControls.Controller;
 
 import java.util.ArrayList;
