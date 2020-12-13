@@ -1,7 +1,6 @@
 // K-means algoritmus s medoidom
 package Algorithms;
 
-import Algorithms.Algorithm;
 import Utils.Distance;
 import Utils.Point;
 import ViewControls.Controller;
@@ -20,7 +19,7 @@ public class KMM extends Algorithm implements Distance {
             Point newRandom = controller.getData().get((int)(Math.random() * controller.getData().size()));
             CMlist.add(new Point(newRandom.X, newRandom.Y));
             for (Point medoid: CMlist) {
-                if (medoid != CMlist.get(i) && this.getDistance(CMlist.get(i).X, CMlist.get(i).Y, medoid.X, medoid.Y) <= 700){
+                if (medoid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, medoid.X, medoid.Y) <= 700){
                     CMlist.remove(i);
                     i--;
                     break;
@@ -39,9 +38,9 @@ public class KMM extends Algorithm implements Distance {
                 index = 0;
                 for (int i = 0; i < CMlist.size(); i++) {
                     if (i == 0) {
-                        distance = this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
-                    } else if (distance > this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y)) {
-                        distance = this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
+                        distance = getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
+                    } else if (distance > getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y)) {
+                        distance = getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
                         index = i;
                     }
                 }
@@ -51,10 +50,10 @@ public class KMM extends Algorithm implements Distance {
                 Point betterMedoid = null;
                 double bestDissim = 0, medoidDissim = 0;
                 for (Point point : medoid.friends){ //kazdy bod medoidu si vyrata celkovu vzdialenost od bodov medoidu, ulozi sa najlepsie zlepsenie
-                    double dissimilarity = this.getDistance(medoid.X, medoid.Y, point.X, point.Y);
-                    medoidDissim += this.getDistance(medoid.X, medoid.Y, point.X, point.Y);
+                    double dissimilarity = getDistance(medoid.X, medoid.Y, point.X, point.Y);
+                    medoidDissim += getDistance(medoid.X, medoid.Y, point.X, point.Y);
                     for (Point point1 : medoid.friends){
-                        dissimilarity += this.getDistance(point1.X, point1.Y, point.X, point.Y);
+                        dissimilarity += getDistance(point1.X, point1.Y, point.X, point.Y);
                     }
                     if (bestDissim == 0){
                         bestDissim = dissimilarity;

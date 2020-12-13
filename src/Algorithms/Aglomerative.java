@@ -1,7 +1,6 @@
 //Aglomerativne zhlukovanie s centroidom
 package Algorithms;
 
-import Algorithms.Algorithm;
 import Utils.Distance;
 import Utils.Point;
 import ViewControls.Controller;
@@ -27,7 +26,7 @@ public class Aglomerative extends Algorithm implements Distance {
             Y = 0;
             for (Point centroid : CMlist){                  //algoritmus prejde vsetky body a najde 2 body ktore su najblizsie
                 for (int i = CMlist.indexOf(centroid) + 1; i < CMlist.size(); i++){
-                    actualDistance = this.getDistance(centroid.X, centroid.Y, CMlist.get(i).X, CMlist.get(i).Y);
+                    actualDistance = getDistance(centroid.X, centroid.Y, CMlist.get(i).X, CMlist.get(i).Y);
                     if (smallestDistance == -1){
                         smallestDistance = actualDistance;
                         pointSwap1 = centroid;

@@ -1,7 +1,6 @@
 // K-means algoritmus s centroidom
 package Algorithms;
 
-import Algorithms.Algorithm;
 import Utils.Distance;
 import Utils.Point;
 import ViewControls.Controller;
@@ -19,7 +18,7 @@ public class KMC extends Algorithm implements Distance {
             Point newRandom = controller.getData().get((int)(Math.random() * controller.getData().size()));
             CMlist.add(new Point(newRandom.X, newRandom.Y));
             for (Point centroid: CMlist) {
-                if (centroid != CMlist.get(i) && this.getDistance(CMlist.get(i).X, CMlist.get(i).Y, centroid.X, centroid.Y) <= 700){
+                if (centroid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, centroid.X, centroid.Y) <= 700){
                     CMlist.remove(i);
                     i--;
                     break;
@@ -38,9 +37,9 @@ public class KMC extends Algorithm implements Distance {
                 index = 0;
                 for (int i = 0; i < CMlist.size(); i++) {
                     if (i == 0) {
-                        distance = this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
-                    } else if (distance > this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y)) {
-                        distance = this.getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
+                        distance = getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
+                    } else if (distance > getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y)) {
+                        distance = getDistance(point.X, point.Y, CMlist.get(i).X, CMlist.get(i).Y);
                         index = i;
                     }
                 }

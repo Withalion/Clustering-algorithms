@@ -1,9 +1,6 @@
 package ViewControls;
 
-import Algorithms.Aglomerative;
-import Algorithms.Algorithm;
-import Algorithms.KMC;
-import Algorithms.KMM;
+import Algorithms.*;
 import Utils.*;
 import javafx.stage.Stage;
 import java.util.ArrayList;
@@ -55,6 +52,8 @@ public class Controller {
                 break;
             case "diviz. zhlukovanie, centroid":
                 start = System.nanoTime();
+                seekAlgo = new Divisive();
+                seekAlgo.clusterAlgorithm(this);
                 end = System.nanoTime();
                 break;
         }
