@@ -12,13 +12,13 @@ public class KMC extends Algorithm implements Distance {
     @Override
     public void clusterAlgorithm(Controller controller){
         double distance = 0;
-        final int CENTROID_NUM = 20;    //pocet ocakavanych centroidov
+        final int CENTROID_NUM = 18;    //pocet ocakavanych centroidov
         int index, change = 2 * CENTROID_NUM;
-        for (int i = 0; i < CENTROID_NUM; i++){   //vytvori sa dany pocet centroidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 700
+        for (int i = 0; i < CENTROID_NUM; i++){   //vytvori sa dany pocet centroidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 800
             Point newRandom = controller.getData().get((int)(Math.random() * controller.getData().size()));
             CMlist.add(new Point(newRandom.X, newRandom.Y));
             for (Point centroid: CMlist) {
-                if (centroid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, centroid.X, centroid.Y) <= 700){
+                if (centroid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, centroid.X, centroid.Y) <= 800){
                     CMlist.remove(i);
                     i--;
                     break;

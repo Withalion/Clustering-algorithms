@@ -11,15 +11,15 @@ public class KMM extends Algorithm implements Distance {
 
     @Override
     public void clusterAlgorithm(Controller controller){
-        final int MEDOID_NUM = 20;
+        final int MEDOID_NUM = 19;
         int index;
         double distance = 0;
         boolean change = true;
-        for (int i = 0; i < MEDOID_NUM; i++){   //vytvori sa dany pocet medoidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 700
+        for (int i = 0; i < MEDOID_NUM; i++){   //vytvori sa dany pocet medoidov na poziciach nahodneho bodu, vzdialenost od seba budu mat vacsiu ako 800
             Point newRandom = controller.getData().get((int)(Math.random() * controller.getData().size()));
             CMlist.add(new Point(newRandom.X, newRandom.Y));
             for (Point medoid: CMlist) {
-                if (medoid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, medoid.X, medoid.Y) <= 700){
+                if (medoid != CMlist.get(i) && getDistance(CMlist.get(i).X, CMlist.get(i).Y, medoid.X, medoid.Y) <= 800){
                     CMlist.remove(i);
                     i--;
                     break;

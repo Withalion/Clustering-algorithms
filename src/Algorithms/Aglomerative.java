@@ -11,7 +11,7 @@ public class Aglomerative extends Algorithm implements Distance {
 
     @Override
     public void clusterAlgorithm(Controller controller){
-        final int MAX_MIN_DISTANCE = 500;               //algoritmus bude spajat pokial vzdialenosti medzi clustrami budu mensie ako tatp
+        final int MAX_MIN_DISTANCE = 500;               //algoritmus bude spajat pokial vzdialenosti medzi clustrami budu mensie ako tato
         Point pointSwap1 = null, pointSwap2 = null;
         double smallestDistance = -1, actualDistance;
         int X, Y;
